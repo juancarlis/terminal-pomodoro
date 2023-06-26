@@ -3,10 +3,12 @@ import click
 from src.stopwatch.models import Stopwatch
 
 
-@click.group()
-def stopwatch():
+@click.group(invoke_without_command=True)
+@click.pass_context
+def stopwatch(ctx):
     """Manages stopwatch."""
-    pass
+    if ctx.invoked_subcommand is None:
+        ctx.invoke(start)
 
 
 @stopwatch.command()
