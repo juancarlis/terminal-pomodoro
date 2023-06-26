@@ -1,2 +1,3 @@
-# terminal-pomodoro
-My own pomodoro terminal tracker.
+# ttt
+Terminal Time Tracker
+My own time tracker cli application.
